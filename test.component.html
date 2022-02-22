@@ -1,0 +1,31 @@
+<div class="header">
+    <i class="fa fa-bars" aria-hidden="true" (click)='toogleclick()'></i>
+    <div class="entete">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        <i class="fa fa-facebook-official" aria-hidden="false"></i>
+    </div>
+</div>
+
+<div class="side">
+    <ng-sidebar-container>
+        <p>bonjour</p> 
+        <!--sidebar-->
+        <ng-sidebar [opened]="opened">
+            <div class="home">
+                <i class="fa fa-home" aria-hidden="true">nos menu</i>
+                <ul class="menu">
+                    <i class="fa fa-table" aria-hidden="true">
+                        <a routerLink="./../../modules/material">material</a>
+                    </i><br/>
+                    <i class="fa fa-location-arrow" aria-hidden="true">
+                        <a routerLink="./googlemap">googlemap</a>
+                    </i>
+                </ul>
+            </div>
+
+        </ng-sidebar>
+
+        <!-- page content-->
+    </ng-sidebar-container>
+    <router-outlet></router-outlet>
+</div>
